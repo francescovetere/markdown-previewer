@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./App.scss";
 import Editor from "./Editor";
 import Preview from "./Preview";
 

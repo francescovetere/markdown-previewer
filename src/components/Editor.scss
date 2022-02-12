@@ -1,0 +1,22 @@
+@use "variables";
+
+.textarea-container {
+  flex: 1;
+  padding: 0.5em 1em;
+
+  textarea {
+    width: 100%;
+    height: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid variables.$clr-toolbar;
+    border-radius: 1em;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+
+    &:focus {
+      border: 2px solid darken(variables.$clr-toolbar, 10%);
+    }
+  }
+}

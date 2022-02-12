@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "./Container";
+import "./Editor.scss";
 
 interface PropTypes {
   rows: number;
@@ -10,32 +11,19 @@ interface PropTypes {
 
 export default function Editor({ rows, cols, text, setText }: PropTypes) {
   return (
-    // <div className="container">
-    //   <Toolbar title="Editor" />
-
-    //   <textarea
-    //     id="editor"
-    //     name="editor"
-    //     rows={rows}
-    //     cols={cols}
-    //     value={text}
-    //     onChange={(e) => {
-    //       setText(e.target.value);
-    //     }}
-    //   />
-    // </div>
-
     <Container title="Editor">
-      <textarea
-        id="editor"
-        name="editor"
-        rows={rows}
-        cols={cols}
-        value={text}
-        onChange={(e) => {
-          setText(e.target.value);
-        }}
-      />
+      <div className="textarea-container">
+        <textarea
+          id="editor"
+          className="editor"
+          // rows={rows}
+          // cols={cols}
+          value={text}
+          onChange={(e) => {
+            setText(e.target.value);
+          }}
+        />
+      </div>
     </Container>
   );
 }

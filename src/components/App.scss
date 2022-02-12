@@ -1,0 +1,48 @@
+@use "variables";
+
+* {
+  margin: 0px;
+  font-family: variables.$ff-primary;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+p,
+code {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea {
+  padding: 1em;
+  border: none;
+}
+
+pre {
+  border: none;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 7em 2em;
+  background-color: variables.$clr-body;
+
+  #app {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+}
