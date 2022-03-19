@@ -1,6 +1,11 @@
+@use "variables";
+
 .preview {
-  padding: 0.5em 1em;
+  height: 100%;
+  padding: 2em;
   overflow: auto;
+
+  border: 5px solid variables.$clr-toolbar;
 
   pre {
     background: white;
@@ -9,7 +14,6 @@
 
   img {
     max-width: 100%;
-    height: auto;
   }
 
   * ~ * {

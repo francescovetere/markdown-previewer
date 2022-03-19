@@ -1,7 +1,9 @@
 @use "variables";
 
 * {
-  margin: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: variables.$ff-primary;
 }
 
@@ -18,31 +20,43 @@ a {
   text-decoration: none;
 }
 
-textarea {
-  padding: 1em;
-  border: none;
-}
-
+textarea,
 pre {
-  border: none;
-  border-radius: 1em;
   padding: 1em;
+
+  border: none;
 }
 
 body {
-  display: flex;
+  // display: flex;
   justify-content: center;
-  min-height: 100vh;
-  margin: 7em 2em;
+  // min-height: 100vh;
   background-color: variables.$clr-body;
 
   #app {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+    .title {
+      margin-top: 50px;
 
-    @media (max-width: 600px) {
-      flex-direction: column;
+      color: #ffffff;
+      font: 3rem variables.$ff-secondary;
+      text-shadow: 2px 2px 0 #5c5c5c, 2px -2px 0 #5c5c5c, -2px 2px 0 #5c5c5c,
+        -2px -2px 0 #5c5c5c, 2px 0px 0 #5c5c5c, 0px 2px 0 #5c5c5c,
+        -2px 0px 0 #5c5c5c, 0px -2px 0 #5c5c5c, 6px 6px 10px #7a7a7a;
+      text-align: center;
+    }
+
+    .editor-preview-container {
+      display: flex;
+      gap: 50px;
+
+      margin: 50px 30px;
+
+      @media (max-width: 991px) {
+        flex-direction: column;
+        align-items: center;
+
+        padding-inline: 20px;
+      }
     }
   }
 }

@@ -53,8 +53,11 @@ export default function App() {
 
   return (
     <>
-      <Editor rows={10} cols={50} text={text} setText={setText} />
-      <Preview text={text} />
+      <h1 className="title">Markdown Previewer</h1>
+      <div className="editor-preview-container">
+        <Editor rows={10} cols={50} text={text} setText={setText} />
+        <Preview text={text} />
+      </div>
     </>
   );
 }
