@@ -47,6 +47,7 @@ body {
 
     .editor-preview-container {
       display: flex;
+      justify-content: center;
       gap: 50px;
 
       margin: 50px 30px;
@@ -55,7 +56,7 @@ body {
         flex-direction: column;
         align-items: center;
 
-        padding-inline: 20px;
+        margin-inline: 15px;
       }
     }
   }
